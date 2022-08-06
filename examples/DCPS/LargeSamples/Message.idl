@@ -1,0 +1,6 @@
+
+@topic
+struct Message {
+    int32 id;
+    sequence<octet> data;
+}
