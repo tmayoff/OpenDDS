@@ -1,4 +1,4 @@
-#include "MessengerTypeSupportImpl.h"
+#include "MessageTypeSupportImpl.h"
 
 #include <ace/Log_Msg.h>
 
