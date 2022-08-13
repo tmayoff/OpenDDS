@@ -1,0 +1,8 @@
+module Messenger {
+
+  @topic
+  struct Image {
+    @key long id;
+    sequence<octet> bytes;
+  };
+};
