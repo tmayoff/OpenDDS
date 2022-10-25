@@ -1,4 +1,4 @@
-ARG BASIS=ubuntu:focal
+ARG BASIS=debian:11
 FROM $BASIS
 
 ENV DEBIAN_FRONTEND=noninteractive
