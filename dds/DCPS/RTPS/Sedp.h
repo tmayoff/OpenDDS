@@ -7,8 +7,8 @@
 #define OPENDDS_DCPS_RTPS_SEDP_H
 
 #include "TypeLookup.h"
-#include "BaseMessageTypes.h"
-#include "BaseMessageUtils.h"
+#include "MessageTypes.h"
+#include "MessageUtils.h"
 #ifdef OPENDDS_SECURITY
 #  include "ParameterListConverter.h"
 #endif
@@ -40,10 +40,12 @@
 #include <dds/DCPS/SporadicTask.h>
 #include <dds/DCPS/TopicDetails.h>
 #include <dds/DCPS/AtomicBool.h>
+
+#include <dds/DCPS/transport/framework/TransportClient.h>
+#include <dds/DCPS/transport/framework/TransportDefs.h>
+#include <dds/DCPS/transport/framework/TransportInst_rch.h>
 #include <dds/DCPS/transport/framework/TransportRegistry.h>
 #include <dds/DCPS/transport/framework/TransportSendListener.h>
-#include <dds/DCPS/transport/framework/TransportClient.h>
-#include <dds/DCPS/transport/framework/TransportInst_rch.h>
 
 #include <dds/DdsDcpsInfrastructureC.h>
 #include <dds/DdsDcpsInfoUtilsC.h>
@@ -652,11 +654,6 @@ public:
   }
 #endif
 
-  void type_lookup_service(const XTypes::TypeLookupService_rch type_lookup_service)
-  {
-    type_lookup_service_ = type_lookup_service;
-  }
-
   RcHandle<DCPS::TransportInst> transport_inst() const { return transport_inst_; }
 
 private:
@@ -1044,6 +1041,7 @@ private:
   public:
     Reader(const DCPS::RepoId& sub_id, Sedp& sedp)
       : Endpoint(sub_id, sedp)
+      , mb_alloc_(DCPS::DEFAULT_TRANSPORT_RECEIVE_BUFFERS)
     {}
 
     virtual ~Reader();
@@ -1064,6 +1062,8 @@ private:
       const DCPS::EntityId_t& entity_id,
       DCPS::Serializer& ser,
       DCPS::Extensibility extensibility) = 0;
+
+    DCPS::TransportMessageBlockAllocator mb_alloc_;
   };
 
   typedef DCPS::RcHandle<Reader> Reader_rch;
