@@ -1,4 +1,4 @@
-ARG BASIS=debian:11
+ARG BASIS=debian:bookworm
 FROM $BASIS
 
 ENV DEBIAN_FRONTEND=noninteractive
