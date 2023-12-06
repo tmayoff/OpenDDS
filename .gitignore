@@ -19,6 +19,7 @@ build/
 build-*/
 cmake-build/
 compile_commands.json
+obj-*
 
 # Visual Studio
 *.vcxproj*

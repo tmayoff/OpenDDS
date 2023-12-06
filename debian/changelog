@@ -1,0 +1,29 @@
+opendds (3.26.1) UNRELEASED; urgency=medium
+
+  * Bumped Upstream version
+
+ -- Tyler Mayoff <tyler@tylermayoff.com>  Tue, 28 Nov 2023 13:20:21 -0500
+
+opendds (3.24.2-1) bookworm; urgency=medium
+
+  * Bumped upstream version  
+
+ -- Tyler Mayoff <tyler@tylermayoff.com>  Mon, 10 Jul 2023 14:04:29 -0400
+
+opendds (3.24.1-2) bookworm; urgency=medium
+
+  * Added security support and RTPSRelay support from upstream
+
+ -- Tyler Mayoff <tyler@tylermayoff.com>  Mon, 10 Jul 2023 13:15:20 -0400
+
+opendds (3.24.1-1) bookworm; urgency=medium
+
+  * Bumped upstream version
+
+ -- Tyler Mayoff <tyler@tylermayoff.com>  Wed, 31 May 2023 09:59:33 -0400
+
+opendds (3.23.1-1) bookworm; urgency=medium
+
+  * Initial release
+
+ -- Tyler Mayoff <tyler@tylermayoff.com>  Mon, 02 Jan 2023 23:07:05 +0000

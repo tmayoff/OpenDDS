@@ -1,0 +1,4 @@
+usr/include/*
+usr/bin/opendds_idl
+usr/bin/tao_idl
+usr/share/*

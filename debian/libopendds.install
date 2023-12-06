@@ -1,0 +1,5 @@
+usr/bin/ace_gperf
+usr/bin/DCPSInfoRepo
+usr/bin/RtpsRelay
+usr/lib/*.so*
+usr/lib/pkgconfig/*

@@ -1,0 +1,21 @@
+Source: opendds
+Priority: optional
+Maintainer: Tyler Mayoff <tyler@tylermayoff.com>
+Build-Depends: debhelper-compat (= 13), autotools-dev
+Standards-Version: 4.5.1
+Section: libs
+Homepage: https://opendds.org
+Rules-Requires-Root: no
+
+Package: libopendds-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libopendds (= ${binary:Version}), ${misc:Depends}
+Description: OpenDDS development files
+
+Package: libopendds
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}, libxerces-c-dev, libssl-dev rapidjson-dev
+Description: OpenDDS binaries
